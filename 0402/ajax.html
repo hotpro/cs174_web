@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <script type="text/javascript" src="bounce.js"></script>
+  <script type="text/javascript">
+    var request;
+    function doAJAX() {
+      console.log("doAJAX");
+      request = new XMLHttpRequest();
+      request.open("GET", "lorem.txt");
+      request.onreadystatechange = displayFile;
+      request.send(null);
+    }
+
+    function displayFile() {
+      if (request.readyState == 4) {
+        if (request.status == 200) {
+          var text = request.responseText;
+          text = text.replace(/\n/g, "<br />");
+          document.getElementById("output").innerHTML =
+                          "<p>" + text + "</p>";
+        }
+      }
+    }
+  </script>
+</head>
+
+<body onload="init()">
+  <h1>Hi AJAX</h1>
+
+  <canvas id="canvas"
+    height="200"
+    width="200"
+    >
+    <p>Canvas not supported</p>
+
+  </canvas>
+
+  <form action="">
+    <button type="button"
+            onclick="doAJAX()">
+            Click for AJAX!
+          </button>
+  </form>
+
+  <hr />
+
+  <div id="output">
+    <p> watch this space</p>
+  </div>
+
+</body>
+</html>
