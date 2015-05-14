@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+#map-canvas {
+  height: 80%;
+  width: 80%;
+}

@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+    background-color: lightgray;
+}
+
+#all {
+    background-color: white;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    background-color: green;
+    float: left;
+    width: 150px;
+    color: white;
+    height: 400px;
+}
+
+#content {
+    background-color: yellow;
+    float: left;
+    width: 440px;
+    height: 400px;
+    padding-left: 10px;
+}
+
+footer {
+    color: white;
+    background-color: gray;
+    clear: both;
+    text-align: center;
+}

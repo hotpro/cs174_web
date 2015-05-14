@@ -1,0 +1,12 @@
+body {
+    font-family: sans-serif;
+    color: black;
+    background-color: white;
+}
+
+@media (max-width: 700px) {
+  body {
+    color: white;
+    background-color: black;
+  }
+}

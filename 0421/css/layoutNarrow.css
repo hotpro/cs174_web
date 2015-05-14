@@ -1,0 +1,24 @@
+@media (max-width: 600px) {
+    #all {
+        width: 90%;
+        font-size: 125%;
+    }
+
+    nav {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    #content{
+        display: block;
+        width: 95%;
+        height: auto;
+        padding-left: 5%;
+    }
+
+    footer {
+        display: block;
+        width: 100%;
+    }
+}
