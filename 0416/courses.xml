@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<courses>
+    <course>
+        <title>CS 149 Operating Systems</title>
+        <description>
+            Fundamentals: Contiguous and non-contiguous 
+            memory management; processor scheduling and 
+            interrupts; concurrent, mutually exclusive, 
+            synchronized and deadlocked processes; files. 
+            Substantial programming project required. 
+        </description>
+        <prequisites>
+            CS 146 or SE 146 
+            (with a grade of "C-" or better).
+        </prequisites>
+    </course>
+    <course>
+        <title>CS 153 Compiler Design</title>
+        <description>
+            Theoretical aspects of compiler design, 
+            including parsing context free languages, 
+            lexical analysis, translation specification 
+            and machine-independent code generation. 
+            Programming projects to demonstrate design 
+            topics. 
+        </description>
+        <prequisites>
+            CS 47 or CMPE 102, 
+            CS 146, and CS 154 (with a grade of "C-" 
+            or better in each) or instructor consent.
+        </prequisites>
+    </course>
+    <course>
+        <title>CS 174 Web Programming</title>
+        <description>
+            Development and deployment of multi-tier 
+            web-based applications. Introduction to 
+            HTML, XML, enterprise design patterns, 
+            web services and database access.
+        </description>
+        <prequisites>
+            CS 46B (with a grade 
+            of "C-" or better).
+        </prequisites>
+    </course>
+    <course>
+        <title>CS 235 User Interface Design</title>
+        <description>
+            We will study the principles of designing, 
+            developing, and evaluating a compelling and 
+            effective user interface (UI) and experience 
+            (UX) for desktop, web, and mobile applications. 
+        </description>
+        <topics>
+            <topic>User requirements and use cases</topic>
+            <topic>UI and UX design patterns</topic>
+            <topic>Usability testing</topic>
+        </topics>
+        <prequisites>
+            CS 46B (with a grade 
+            of "C-" or better).
+        </prequisites>
+    </course>
+</courses>
