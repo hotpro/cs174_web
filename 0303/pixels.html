@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Altered Pixels</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">  
+        function draw()
+        {
+            var canvas1 = document.getElementById("canvas1");
+            var canvas2 = document.getElementById("canvas2");
+            var image = new Image();
+            image.src = "images/RonCats.jpg";
+            
+            var con = canvas1.getContext("2d");
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            con.drawImage(image, 10, 10, 180, 135);
+            
+            con = canvas2.getContext("2d");
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            con.drawImage(image, 10, 10, 180, 135);
+            
+            var imageData = con.getImageData(10, 10, 180, 135);
+            
+            for (var row = 0; row < 135; row++) {
+                for (var col = 0; col < 180; col++) {
+                    var index = 4*(col + row*imageData.width);
+                    
+                    var r = imageData.data[index];
+                    var g = imageData.data[index+1];
+                    var b = imageData.data[index+2];
+                    var a = imageData.data[index+3];
+                    
+                    g = r;
+                    b = r;
+            
+                    imageData.data[index]   = r;
+                    imageData.data[index+1] = g;
+                    imageData.data[index+2] = b;
+                    imageData.data[index+3] = a;
+                }
+            }
+            
+            con.putImageData(imageData, 10, 10);
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Altered Pixels</h1>
+    
+    <canvas id = "canvas1"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+    
+    <canvas id = "canvas2"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>

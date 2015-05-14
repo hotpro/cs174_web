@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Gradients</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">
+function draw()
+{
+    var linear = document.getElementById("linear");
+    var radial = document.getElementById("radial");
+    
+    // Linear gradient
+    var con = linear.getContext("2d");
+    lGrad = con.createLinearGradient(0, 0, 100, 200);
+    
+    lGrad.addColorStop(0,   "#FF0000");
+    lGrad.addColorStop(0.5, "#00FF00");
+    lGrad.addColorStop(1,   "#0000FF");
+    
+    con.fillStyle = lGrad;
+    con.fillRect(0, 0, 200, 200);
+    
+    // Radial gradient
+    con = radial.getContext("2d");
+    
+    rGrad = con.createRadialGradient(50, 50, 0, 100, 100, 125);
+    rGrad.addColorStop(0,   "#FF0000");
+    rGrad.addColorStop(0.5, "#00FF00");
+    rGrad.addColorStop(1,   "#0000FF");
+    
+    con.fillStyle = rGrad;
+    con.fillRect(0, 0, 200, 200);
+}
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Gradients</h1>
+    
+    <canvas id     = "linear"
+            height = "200"
+            width  = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+    
+    <canvas id     = "radial"
+            height = "200"
+            width  = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>
+</html>
+

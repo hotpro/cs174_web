@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset = "UTF-8">
+    <title>Validate User Input #1</title>
+    <link rel="stylesheet" type="text/css" href="validate1.css" />
+
+    <script type = "text/javascript">
+        function validate()
+        {
+            name  = document.getElementById("name").value;
+            phone = document.getElementById("phone").value;
+            email = document.getElementById("email").value;
+
+            errors = "";
+
+            if (name == "") {
+                errors += "Missing name.\n";
+            }
+
+            phoneRE = /^\(\d{3}\) *\d{3}-\d{4}$/;
+            if (!phone.match(phoneRE)){
+                errors += "Invalid phone number. " +
+                          "Example: (999) 999-9999\n";
+            }
+
+            emailRE = /^.+@.+\..{2,4}$/;
+            if (!email.match(emailRE)){
+                errors += "Invalid email address. " +
+                          "Should be xxxxx@xxxxx.xxx\n";
+            }
+
+            if (errors != "") {
+              alert(errors);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action = "">
+        <fieldset>
+            <legend>User input</legend>
+            <label>Name:</label>
+            <input type = "text"
+                   value = ""
+                   id = "name" />
+            <label>Phone number:</label>
+            <input type = "text"
+                   value = "(nnn) nnn-nnnn"
+                   id = "phone" />
+            <label>Email address:</label>
+            <input type = "text"
+                   value = "xxxxx@xxxxx.xxx"
+                   id = "email" />
+            <button type = "button"
+                    onclick = "validate()">
+                Submit
+            </button>
+        </fieldset>
+    </form>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Simple Canvas Demo</title>
+    <meta charset="UTF-8" />
+
+    <script type="text/javascript">
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            var con = canvas.getContext('2d');
+            
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            con.fillStyle = "red";
+            con.fillRect(40, 140, 150, 50);      
+        }
+    </script>
+</head>
+
+<body onload="draw()">
+    <h1>Simple Canvas Demo</h1>
+    
+    <canvas id     = "canvas"
+            width  = "200"
+            height = "200">
+        <p>Your browser does not support the canvas tag.</p>
+    </canvas>
+</body>
+</html>

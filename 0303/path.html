@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Path Demo</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            var con = canvas.getContext("2d");
+            
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            
+            con.strokeStyle = "red";
+            con.fillStyle = "green";
+            con.lineWidth = "10";
+            
+            con.beginPath();
+            con.moveTo(25, 25);
+            con.lineTo(150, 150);
+            con.lineTo(25, 150);
+            con.lineTo(25, 100);
+            
+            con.stroke();
+            con.fill();
+            con.closePath();
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Path Demo</h1>
+    
+    <canvas id = "canvas"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>
+</html>

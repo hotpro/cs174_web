@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Shadows</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            var con = canvas.getContext("2d");
+            
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            
+            con.shadowOffsetX = 3;
+            con.shadowOffsetY = 3;
+            con.shadowColor = "gray";
+            con.shadowBlur = 5;
+            
+            con.font = "40pt sans-serif";
+            con.fillStyle = "red";
+            con.fillText("CS 174", 5, 100);
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Shadows</h1>
+    
+    <canvas id = "canvas"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>
+</html>

@@ -1,0 +1,40 @@
+h1 {
+  text-align: center;
+}
+
+fieldset {
+  width: 25em;
+  background-color: lightgray;
+  box-shadow: 5px 5px 5px gray;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+label {
+  float: left;
+  width: 7em;
+  clear: left;
+  text-align: right;
+  padding-right: 1em;
+}
+
+input {
+  float: left;
+}
+
+button {
+  display: block;
+  margin-top: 30em;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+
+input:required {
+  border: 1px solid blue;
+}
+
+input:invalid {
+  color: white;
+  background-color: red;
+}

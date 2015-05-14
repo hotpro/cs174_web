@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Line Attributes</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javaScript">
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            var con = canvas.getContext("2d");
+            
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            con.lineWidth = 10;
+            
+            con.lineJoin = "round"
+            con.strokeStyle = "red";
+            con.beginPath();
+            con.moveTo(20, 50);
+            con.lineTo(30, 20);
+            con.lineTo(40, 50);
+            con.stroke();
+            con.closePath();
+            
+            con.lineJoin = "bevel"
+            con.strokeStyle = "blue";
+            con.beginPath();
+            con.moveTo(60, 50);
+            con.lineTo(70, 20);
+            con.lineTo(80, 50);
+            con.stroke();
+            con.closePath();
+            
+            con.lineJoin = "miter";
+            con.strokeStyle = "green"
+            con.beginPath();
+            con.moveTo(100, 50);
+            con.lineTo(110, 20);
+            con.lineTo(120, 50);
+            con.stroke();
+            con.closePath();
+            
+            con.lineCap = "round";
+            con.strokeStyle = "red"
+            con.beginPath();
+            con.moveTo(20, 100);
+            con.lineTo(180, 100);
+            con.stroke();
+            con.closePath();
+            
+            con.lineCap = "butt";
+            con.strokeStyle = "blue"
+            con.beginPath();
+            con.moveTo(20, 120);
+            con.lineTo(180, 120);
+            con.stroke();
+            con.closePath();
+            
+            con.lineCap = "square";
+            con.strokeStyle = "green"
+            con.beginPath();
+            con.moveTo(20, 140);
+            con.lineTo(180, 140);
+            con.stroke();
+            con.closePath();
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Line Attributes</h1>
+    
+    <canvas id = "canvas"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>
+</html>

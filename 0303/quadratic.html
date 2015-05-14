@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Quadratic Curve</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">
+        var con;
+        
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            con = canvas.getContext("2d");
+            
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            con.lineWidth = "5";
+            
+            con.beginPath();
+            con.moveTo(10,190);
+            con.quadraticCurveTo(100, 10, 190, 190);
+            con.stroke();
+            con.closePath();
+            
+            // Blue dots: start and end points.
+            drawDot(10,  190, "blue");
+            drawDot(190, 190, "blue");
+            
+            // Red dot: control point.
+            drawDot(100, 10, "red");
+        }
+        
+        function drawDot(x, y, color)
+        {
+            con.fillStyle = color;
+            con.beginPath();
+            con.arc(x, y, 10, 0, 2*Math.PI, true);
+            con.fill();
+            con.closePath();
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Quadratic Curve</h1>
+    
+    <canvas id = "canvas"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>
+</html>

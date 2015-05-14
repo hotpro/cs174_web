@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Arc and Circle Demo</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            var con = canvas.getContext("2d");
+            
+            con.strokeStyle = "black";
+            con.strokeRect(0, 0, 200, 200);
+            
+            // Stroked closed half-circle
+            con.strokeStyle = "green";
+            con.lineWidth = "5";            
+            con.beginPath();
+            con.arc(70, 30, 50, 0, Math.PI, false);
+            con.closePath();
+            con.stroke();
+            
+            // Filled full circle
+            con.fillStyle = "rgba(255, 0, 0, 0.5)";
+            con.beginPath();
+            con.arc(70, 100, 50, 0, 2*Math.PI, true);
+            con.closePath();
+            con.fill();
+            
+            // Stroked quarter arc
+            con.strokeStyle = "blue";
+            con.beginPath();
+            con.arc(180, 120, 50, Math.PI/2, Math.PI, false);
+            con.stroke();
+            con.closePath();
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Arc and Circle Demo</h1>
+    
+    <canvas id = "canvas"
+            height = "200"
+            width = "200">
+        <p>Canvas not supported!</p>
+    </canvas>
+</body>
+</html>

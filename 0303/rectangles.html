@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>Rectangle Demo</title>
+    <meta charset = "UTF-8" />
+    <script type = "text/javascript">
+        function draw()
+        {
+            var canvas = document.getElementById("canvas");
+            var con = canvas.getContext("2d");
+            
+            con.fillStyle = "blue";
+            con.strokeStyle = "black";
+            con.lineWidth = "5";
+            
+            con.strokeRect(0, 0, 200, 200);
+            con.fillRect(10, 10, 180, 80);
+            con.clearRect(0, 50, 90, 70);
+        }
+    </script>
+</head>
+
+<body onload = "draw()">
+    <h1>Rectangle Demo</h1>
+    <canvas id =     "canvas"
+            height = "200"
+            width  = "200" >
+        <p>Canvas not supported</p>
+    </canvas>
+</body>
+</html>
