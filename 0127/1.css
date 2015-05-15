@@ -1,0 +1,37 @@
+h1 {
+    background-color: yellow;
+    color: red;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: gray;
+}
+
+p {
+    text-align: justify;
+}
+
+.latin {
+    font-style: italic;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: orange;
+}
+
+a:focus {
+    color: purple;
+}
+
+a:hover {
+    color: green;
+}
+
+a:active {
+    color: blue;
+}

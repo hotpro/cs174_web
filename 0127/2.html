@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form action="text.php"
+        method="post">
+        <fieldset>
+            <legend>User Input</legend>
+            <p>
+                <label>First Name:</label>
+                <input name="firstName" type="text">
+            </p>
+
+            <p>
+                <label>Last Name:</label>
+                <input name="lastName" type="text">
+            </p>
+
+            <p>
+                <label>Any formatting?</label>
+                <input type="checkbox"
+                       name="strong"
+                       value="strong" /> Strong!
+                <input type="checkbox"
+                       name="em"
+                       value="em" />  Emphasized!
+            </p>
+
+            <p>
+                <label>Direction</label>
+                <input type="radio"
+                       name="direction"
+                       value="coming" 
+                       checked /> Coming
+                <input type="radio"
+                       name="direction"
+                       value="going" /> Going
+            </p>
+
+            <p>
+               <label>Language?</label>
+               <select name="language">
+                   <option value="english" selected>English</option>
+                   <option value="french">Français</option>
+                   <option value="german">Deutsch</option>
+               </select>
+            </p>
+
+            <p>
+                <input type="hidden" name="unseen" id="unseen" value="some value" />
+            </p>
+
+            <p>
+                <input type="submit" value="Submit">
+            </p>
+
+
+
+        </fieldset>
+    </form>
+    
+</body>
+</html>
